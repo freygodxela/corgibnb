@@ -1,5 +1,5 @@
 class Corgi < ApplicationRecord
   belongs_to :user
 
-  has_one :photo
+  has_one_attached :photo
 end
