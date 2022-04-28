@@ -1,0 +1,16 @@
+div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>add your corgi</h3>
+        <%= simple_form_for @corgi do |f| %>
+          <%= f.input :name, placeholder: 'corgi' %>
+          <%= f.submit class: 'btn btn-flat' %>
+          <%= f.input :photo %>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to 'back', root_path %>
