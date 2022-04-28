@@ -5,8 +5,7 @@ div class="container py-5">
         <h3>add your corgi</h3>
         <%= simple_form_for @corgi do |f| %>
           <%= f.input :name, placeholder: 'corgi' %>
-          <%= f.submit class: 'btn btn-flat' %>
-          <%= f.input :photo %>
+          <%= f.input :photo, as: :file %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
       </div>
