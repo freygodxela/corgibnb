@@ -1,77 +1,41 @@
-<!DOCTYPE html>
-<html>
+<div class="row">
+    <% @corgis.each do |corgi| %>
+      <div class="co-12 col-sm-6 col-md-4">
+        <%= link_to corgi_path(corgi), class: "text-decoration-none" do %>
+        <%= corgi.name %>
+        <%= corgi.photo %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-  <head>
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-
-  </head>
-
-  <body>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Corgis</h1>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="thumbnail">
-              <img src="http://i.imgur.com/8gpaY5u.jpg">
-            </div>
-            <div class="thumbnail">
-              <img src="http://i.imgur.com/YwkuheC.jpg">
-            </div>
-          </div>
-          <div class=col-md-4>
-            <div class="thumbnail">
-              <img src="http://i.imgur.com/bMDGhRs.jpg">
-            </div>
-            <div class="thumbnail">
-              <img src="http://i.imgur.com/bh3lxdE.jpg">
-            </div>
-
-          </div>
-          <div class=col-md-4>
-            <div class="thumbnail">
-              <img src="http://i.imgur.com/XkfjNl6.jpg">
-            </div>
-            <div class="thumbnail">
-              <img src="http://i.imgur.com/XneV0Ts.jpg">
-            </div>
-
-          </div>
 
 
     <div class="learn-more">
 	  <div class="container">
-	    <div class="row">
+	  <div class="row">
 
-		<div>
-		<div class="col-md-4">
-	      <div>
-			<h3>Terms and Conditions</h3>
+      <div>
+      <h3>would you like to share your corgi?</h3>
+      <p><%= link_to 'click here to add your corgi', new_corgi_path, class: "btn btn-ghost"%></p>
+      </div>
+		  <div>
+		  <div class="col-md-4">
+	    <div>
+			<h4>Terms and Conditions</h4>
 			<p> you can do a lot with cogis, you can also travel with them</p>
 			<p><a href="#">Learn more</a></p>
 	      </div>
 	      </div>
-	      <div class="col-md-4">
-		  <div>
-			<h3>Money Guarantee</h3>
-			<p>get your money back</p>
-			<p><a href="#">terms and conditions at corgibnb</a></p>
-		  </div>
-		  </div>
 		  <div class="col-md-4">
 		  <div>
-			<h3>Trust and Safety</h3>
+			<h4>Trust and Safety</h4>
 			<p>all our corgis have been tested and vaccinated, which will prevent our guestes from being exposed to dangerous diseases</p>
-			<p><a href="#">Learn about trust at corgibnb</a></p>
+			<p ><a href="#">Learn about trust at corgibnb </a></p>
 		  </div>
 		  </div>
 		  </div>
 	    </div>
 	  </div>
 	</div>
-  </body>
-</html>
