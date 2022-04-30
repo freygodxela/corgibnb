@@ -1,10 +1,8 @@
 <div>
 <h1><%= @corgi.name %></h1>
-<<<<<<< HEAD
- <%= cl_image_tag corgi.photo.key %>
-=======
+<% if @corgi.photo.attached? %>
 <%= cl_image_tag @corgi.photo.key, height: 300, width: 400, crop: :fill %>
->>>>>>> 25aa55b90a16f418f1e854b1a86f0ec19e264d47
+<% end %>
 <p>would you like to spend sometime with <%= @corgi.name %> ? </p>
 <%= link_to 'Book Now',  corgis_path, class: "btn btn-ghost"%>
 </div>

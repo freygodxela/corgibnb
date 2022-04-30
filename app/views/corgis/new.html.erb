@@ -6,6 +6,8 @@
         <%= simple_form_for @corgi do |f| %>
           <%= f.input :name, placeholder: 'Name of corgi' %>
           <%= f.input :photo, as: :file %>
+          <%= f.input :price %>
+          <%= f.input :description %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
       </div>

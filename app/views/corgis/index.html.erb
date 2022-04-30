@@ -3,7 +3,9 @@
       <div class="co-12 col-sm-6 col-md-4">
         <%= link_to corgi_path(corgi), class: "text-decoration-none" do %>
         <%= corgi.name %>
-        <%= cl_image_tag corgi.photo.key %>
+        <% if corgi.photo.attached?  %>
+        <%= cl_image_tag corgi.photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
         <% end %>
       </div>
     <% end %>
