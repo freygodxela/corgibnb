@@ -1,7 +1,7 @@
 
 <div>
 <h1><%= @corgi.name %></h1>
-<h1><%= @corgi.photo%></h1>
+ <%= cl_image_tag corgi.photo.key %>
 <p>would you like to spend sometime with <%= @corgi.name %> ? </p>
 <%= link_to 'click here to check out',  class: "btn btn-ghost"%>
 </div>

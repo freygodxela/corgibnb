@@ -3,7 +3,7 @@
       <div class="co-12 col-sm-6 col-md-4">
         <%= link_to corgi_path(corgi), class: "text-decoration-none" do %>
         <%= corgi.name %>
-        <%= corgi.photo %>
+        <%= cl_image_tag corgi.photo.key %>
         <% end %>
       </div>
     <% end %>

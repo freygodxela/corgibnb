@@ -25,6 +25,6 @@ class CorgisController < ApplicationController
  private
 
   def corgi_params
-    params.require(:corgi).permit(:name, :photo)
+    params.require(:corgi).permit(:name, photo: [])
   end
 end
