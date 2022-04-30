@@ -1,10 +1,10 @@
 require 'open-uri'
 require 'json'
 
-# puts "Cleaning up database..."
-# Corgi.destroy_all
-# User.destroy_all
-# puts "Database cleaned"
+puts "Cleaning up database..."
+Corgi.destroy_all
+User.destroy_all
+puts "Database cleaned"
 
 
 corgi_names = ["lola", "macha", "bubba"]
@@ -30,12 +30,58 @@ user = User.new(
 )
 user.save!
 
-5.times do
-  corgi = Corgi.new(
-    name: corgi_names.sample,
-    description: corgi_descriptions.sample,
-    user_id: user.id
-  )
 
-  corgi.save!
-end
+corgi1 = Corgi.new(
+  name: corgi_names.sample,
+  description: corgi_descriptions.sample,
+  user_id: user.id
+)
+
+file = URI.open(photo.sample)
+
+corgi1.photo.attach(io: file, filename: file, content_type: "image/jpg")
+corgi1.save!
+
+corgi2 = Corgi.create(
+  name: corgi_names.sample,
+  description: corgi_descriptions.sample,
+  user_id: user.id
+)
+
+file = URI.open(photo.sample)
+
+corgi2.photo.attach(io: file, filename: file, content_type: "image/jpg")
+corgi2.save!
+
+corgi3 = Corgi.create(
+  name: corgi_names.sample,
+  description: corgi_descriptions.sample,
+  user_id: user.id
+)
+
+file = URI.open(photo.sample)
+
+corgi3.photo.attach(io: file, filename: file, content_type: "image/jpg")
+corgi3.save!
+
+corgi4 = Corgi.create(
+  name: corgi_names.sample,
+  description: corgi_descriptions.sample,
+  user_id: user.id
+)
+
+file = URI.open(photo.sample)
+
+corgi4.photo.attach(io: file, filename: file, content_type: "image/jpg")
+corgi4.save!
+
+corgi5 = Corgi.create(
+  name: corgi_names.sample,
+  description: corgi_descriptions.sample,
+  user_id: user.id
+)
+
+file = URI.open(photo.sample)
+
+corgi5.photo.attach(io: file, filename: file, content_type: "image/jpg")
+corgi5.save!
