@@ -1,11 +1,12 @@
 <% if user_signed_in? %>
-<%= current_user.email %>
+You are signed in with: <%= current_user.email %>
 <% end %>
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.os.fressnapf.com/cms/2020/07/ratgeber_hund_rasse_portraits_welsh-corgi-pembroke_1200x527.jpg?t=cmsimg_920);">
   <div class="container">
-    <h1>Corgibnb <strong>give you the opportunity</strong> to <strong>walk your favourite pet</strong>!</h1>
-    <p>Change your life and spend some time with your favourite corgi</p>
-    <%= link_to "Sign-up",new_user_registration_path, class: "btn btn-ghost" %>
+    <h1>Spend time your favourite pet!</h1>
+    <p>Change your life, book a corgi today</p>
+    <%= link_to "Book now", new_user_registration_path, class: "btn btn-flat" %>
+
   </div>
 </div>
