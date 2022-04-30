@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<h1><%= @corgi.name %></h1>
-<%= cl_image_tag @corgi.photo.key, height: 300, width: 400, crop: :fill %>
-=======
-
 <div>
 <h1><%= @corgi.name %></h1>
-<h1><%= @corgi.photo%></h1>
+<%= cl_image_tag @corgi.photo.key, height: 300, width: 400, crop: :fill %>
 <p>would you like to spend sometime with <%= @corgi.name %> ? </p>
 <%= link_to 'click here to check out',  class: "btn btn-ghost"%>
 </div>
@@ -13,4 +8,3 @@
 <div>
 <%= link_to 'back', corgis_path,  class: "btn btn-ghost"%>
 </div>
->>>>>>> 38ca3739cddfbc03f1b1b0ca0b01aa5d3eafa88b
