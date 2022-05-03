@@ -3,3 +3,55 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+
+.container {
+  display: flex;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 0px 10px 10px 10px;
+}
+
+.new-card {
+  border-color: #3FABAA;
+  border-radius: 10%;
+}
+
+.new-card img {
+  border-color: #3FABAA;
+  width: 100%;
+  height: 100%;
+}
+
+.new-card-img-top {
+  border-radius: 10%;
+}
+
+
+.index-card {
+  border-radius: 5%;
+}
+
+.index-card-img-top {
+  border-radius: 5%;
+}
+
+.index-card-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.index-card-title {
+  font-size: 25px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.index-card-text {
+  font-size: 14px;
+}
