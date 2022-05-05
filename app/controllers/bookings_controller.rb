@@ -14,11 +14,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.userrenter = current_user
     @corgi = Corgi.find(params[:corgi_id])
     @booking.corgi = @corgi
-    if @booking.save!
-      redirect_to corgi_booking_path(@booking)
+    @booking.user = current_user
+    if @booking.save
+      redirect_to corgi_booking_path(@corgi, @booking)
     else
       render :new
     end
@@ -39,6 +39,6 @@ class BookingsController < ApplicationController
  private
 
   def booking_params
-    params.require(:booking).permit(:booking_date, :corgi_id, :userrenter)
+    params.require(:booking).permit(:booking_date, :corgi_id, :user_id)
   end
 end
