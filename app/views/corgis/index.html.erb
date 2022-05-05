@@ -1,14 +1,19 @@
-<div class="row">
+<div class="container">
+  <div class="cards">
     <% @corgis.each do |corgi| %>
-      <div class="co-12 col-sm-6 col-md-4">
+      <div class="card-category">
         <%= link_to corgi_path(corgi), class: "text-decoration-none" do %>
-        <%= corgi.name %>
+
         <% if corgi.photo.attached?  %>
-        <%= cl_image_tag corgi.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag corgi.photo.key, height: 300, width: 400, crop: :fill, class:"new-card-img-top" %>
         <% end %>
         <% end %>
+        <div class="index-card-body">
+          <h3 class="index-card-title"><%= corgi.name.capitalize %></h3>
+        </div>
       </div>
     <% end %>
+   </div>
   </div>
 </div>
 
