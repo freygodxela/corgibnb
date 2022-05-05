@@ -8,8 +8,10 @@
         <%= cl_image_tag corgi.photo.key, height: 300, width: 400, crop: :fill, class:"new-card-img-top" %>
         <% end %>
         <% end %>
+        <div class= "grid">
         <div class="index-card-body">
-          <h3 class="index-card-title"><%= corgi.name.capitalize %></h3>
+          <%= corgi.description %>
+          <h1 class="index-card-title"><%= corgi.name.capitalize %></h1>
         </div>
       </div>
     <% end %>
