@@ -3,8 +3,11 @@
 <% if @corgi.photo.attached? %>
 <%= cl_image_tag @corgi.photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
+<h4><%= @corgi.price %></h4>
+<h4><%= @corgi.description %></h4>
+<h4> you can pick me up from <%= @corgi.address %></h4>
 <p>would you like to spend sometime with <%= @corgi.name %> ? </p>
-<%= link_to 'Book Now',  corgis_path, class: "btn btn-flat"%>
+<%= link_to 'Book Now',  new_corgi_booking_path(@corgi.id), class: "btn btn-flat"%>
 </div>
 
 <div>

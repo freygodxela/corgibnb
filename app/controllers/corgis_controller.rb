@@ -1,6 +1,14 @@
 class CorgisController < ApplicationController
   def index
     @corgis = Corgi.all
+    @markers = @corgis.geocoded.map do |corgi|
+      {
+        lat: corgi.latitude,
+        lng: corgi.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { corgi: corgi }),
+        image_url: helpers.asset_url("dani.png")
+      }
+    end
   end
 
   def show
@@ -25,7 +33,7 @@ class CorgisController < ApplicationController
  private
 
   def corgi_params
-    params.require(:corgi).permit(:name, :photo, :description, :price)
+    params.require(:corgi).permit(:name, :photo, :description, :price, :address)
   end
 end
 
