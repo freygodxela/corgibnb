@@ -4,6 +4,8 @@
         <%= simple_form_for @corgi do |f| %>
           <%= f.input :name, placeholder: 'Name of corgi' %>
           <%= f.input :photo, as: :file %>
+          <%= f.input :address, input_html: { data: { geocoder_target: "address" }, class: 'd-none'},
+              wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
           <%= f.input :price %>
           <%= f.input :description %>
           <%= f.submit class: 'btn btn-flat' %>
