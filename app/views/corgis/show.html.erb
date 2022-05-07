@@ -1,3 +1,12 @@
+
+<div class="card-product">
+ <h1><%= @corgi.name %></h1>
+  <% if @corgi.photo.attached? %>
+   <%= cl_image_tag @corgi.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+   <p>would you like to spend sometime with <%= @corgi.name %> ? </p>
+  <%= link_to 'Book Now',  new_corgi_booking_path(@corgi.id), class: "btn btn-flat"%>
+
 <div>
 <h1><%= @corgi.name %></h1>
 <% if @corgi.photo.attached? %>
@@ -8,8 +17,9 @@
 <h4> you can pick me up from <%= @corgi.address %></h4>
 <p>would you like to spend sometime with <%= @corgi.name %> ? </p>
 <%= link_to 'Book Now',  new_corgi_booking_path(@corgi.id), class: "btn btn-flat"%>
+
 </div>
 
 <div>
-<%= link_to 'back', corgis_path,  class: "btn btn-ghost"%>
+ <%= link_to 'back', corgis_path,  class: "btn btn-ghost"%>
 </div>
