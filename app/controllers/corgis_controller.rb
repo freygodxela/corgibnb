@@ -1,6 +1,12 @@
 class CorgisController < ApplicationController
   def index
     @corgis = Corgi.all
+    @markers = @corgis.geocoded.map do |corgi|
+      {
+        lat: corgi.latitude,
+        lng: corgi.longitude
+      }
+    end
   end
 
   def show
