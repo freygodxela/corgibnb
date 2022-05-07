@@ -1,3 +1,7 @@
+<<% if user_signed_in? %>
+You are signed in with: <%= current_user.email %>
+<% end %>
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.os.fressnapf.com/cms/2020/07/ratgeber_hund_rasse_portraits_welsh-corgi-pembroke_1200x527.jpg?t=cmsimg_920);">
   <div class="banner h1">
     <h1>Spend time with your favourite pet!</h1>
