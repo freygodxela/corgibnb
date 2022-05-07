@@ -4,7 +4,8 @@ class CorgisController < ApplicationController
     @markers = @corgis.geocoded.map do |corgi|
       {
         lat: corgi.latitude,
-        lng: corgi.longitude
+        lng: corgi.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { corgi: corgi })
       }
     end
   end
