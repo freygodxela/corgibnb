@@ -5,7 +5,8 @@ class CorgisController < ApplicationController
       {
         lat: corgi.latitude,
         lng: corgi.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { corgi: corgi })
+        info_window: render_to_string(partial: "info_window", locals: { corgi: corgi }),
+        image_url: helpers.asset_url("dani.png")
       }
     end
   end
