@@ -4,6 +4,7 @@ require 'json'
 puts "Cleaning up database..."
 Corgi.destroy_all
 User.destroy_all
+Booking.destroy_all
 puts "Database cleaned"
 
 
