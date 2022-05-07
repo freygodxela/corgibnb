@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Dancing+Script:wght@500;600&family=Playfair+Display:ital@1&family=Roboto:wght@300&display=swap');
+
 .container-show {
   display: flex;
   flex-direction: column;
@@ -10,6 +13,7 @@
   padding: 20px 0;
   color: dark-blue;
 }
+
 
 
 .card-product {
@@ -28,12 +32,14 @@
 }
 
 .card-product h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
+  font-family: 'Playfair Display', serif;
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
