@@ -16,7 +16,7 @@ corgi_descriptions = [
 corgi_address = ["6 kochstraße, Berlin", "20 jagowstraße, Berlin", "60 potsdamer straße, Berlin"]
 
 photo = [
-  "https://res.cloudinary.com/le-wagon1234/image/upload/v1572331601/tom-hills-zoF_dgsldlY-unsplash_tjcegs.jpg",
+  "https://res.cloudinary.com/duu9km8ss/image/upload/v1651164655/corgi_ueikqs.jpg",
   "https://res.cloudinary.com/le-wagon1234/image/upload/v1572355540/roi-dimor-4Tx3p2DT4F4-unsplash_bymuqh.jpg",
   "https://res.cloudinary.com/le-wagon1234/image/upload/v1572331333/zachary-casler-99Qi-fLC3hs-unsplash_jadihq.jpg",
   "https://res.cloudinary.com/le-wagon1234/image/upload/v1572331328/jairo-alzate-sssxyuZape8-unsplash_qkwpqx.jpg",

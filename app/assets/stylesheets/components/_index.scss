@@ -61,3 +61,16 @@
 .index-card-text {
   font-size: 14px;
 }
+
+.card-category {
+  display: flex;
+  align-items: center;
+}
+
+#map {
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  margin-right: 10px;
+  flex-grow: 10;
+}
