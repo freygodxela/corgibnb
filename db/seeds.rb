@@ -13,6 +13,8 @@ corgi_descriptions = [
   "Sassy, smart, and sweet!",
   "Loves to play ball, great with other dogs"
 ]
+corgi_address = ["6 kochstraße, Berlin", "20 jagowstraße, Berlin", "60 potsdamer straße, Berlin"]
+
 photo = [
   "https://res.cloudinary.com/le-wagon1234/image/upload/v1572331601/tom-hills-zoF_dgsldlY-unsplash_tjcegs.jpg",
   "https://res.cloudinary.com/le-wagon1234/image/upload/v1572355540/roi-dimor-4Tx3p2DT4F4-unsplash_bymuqh.jpg",
@@ -34,7 +36,8 @@ user.save!
 corgi1 = Corgi.new(
   name: corgi_names.sample,
   description: corgi_descriptions.sample,
-  user_id: user.id
+  user_id: user.id,
+  address: corgi_address.sample
 )
 
 file = URI.open(photo.sample)
@@ -45,7 +48,8 @@ corgi1.save!
 corgi2 = Corgi.create(
   name: corgi_names.sample,
   description: corgi_descriptions.sample,
-  user_id: user.id
+  user_id: user.id,
+  address: corgi_address.sample
 )
 
 file = URI.open(photo.sample)
@@ -56,7 +60,8 @@ corgi2.save!
 corgi3 = Corgi.create(
   name: corgi_names.sample,
   description: corgi_descriptions.sample,
-  user_id: user.id
+  user_id: user.id,
+  address: corgi_address.sample
 )
 
 file = URI.open(photo.sample)
@@ -67,7 +72,8 @@ corgi3.save!
 corgi4 = Corgi.create(
   name: corgi_names.sample,
   description: corgi_descriptions.sample,
-  user_id: user.id
+  user_id: user.id,
+  address: corgi_address.sample
 )
 
 file = URI.open(photo.sample)
@@ -78,7 +84,8 @@ corgi4.save!
 corgi5 = Corgi.create(
   name: corgi_names.sample,
   description: corgi_descriptions.sample,
-  user_id: user.id
+  user_id: user.id,
+  address: corgi_address.sample
 )
 
 file = URI.open(photo.sample)

@@ -60,6 +60,9 @@ ActiveRecord::Schema.define(version: 2022_05_05_184330) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
     t.float "price"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_corgis_on_user_id"
   end
 
