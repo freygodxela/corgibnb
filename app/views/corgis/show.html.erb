@@ -1,12 +1,13 @@
+<div class="container-show">
 <div class="cards">
-<h1><%= @corgi.name %></h1>
+<h1><%= @corgi.name.capitalize %></h1>
 <% if @corgi.photo.attached? %>
 <%= cl_image_tag @corgi.photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
-<h4><%= @corgi.price %></h4>
-<h4><%= @corgi.description %></h4>
-<h4> you can pick me up from <%= @corgi.address %></h4>
-<p>would you like to spend sometime with <%= @corgi.name %> ? </p>
+<p><%= @corgi.price %></p>
+<h2><%= @corgi.description %></h2>
+<p> You can pick me up from <%= @corgi.address %></p>
+<p>Would you like to spend sometime with me? </p>
 <%= link_to 'Book Now',  new_corgi_booking_path(@corgi.id), class: "btn btn-flat"%>
 
 </div>
